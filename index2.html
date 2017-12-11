@@ -1,8 +1,4 @@
 <html><head><style>
-/*#div_main{height:600px;width:600px;}
-#div_1{height:200px;width:200px;background-color: yellow;}
-#div_2{height:200px;width:200px;background-color: red;}
-#div_3{height:200px;width:200px;background-color: forestgreen;}*/
 #picture{height:200px;width:200px;}
 </style>
 <script>
@@ -36,7 +32,7 @@ for(i=1; i<=3; i++){
   div[i].id ='div_'+1+'_'+i
 div2.appendChild(div[i])
 var images = document.createElement('img')
-images.id = 'picture'
+images.id = 'picture'+i
 images.src = 'images/image'+i+'.png'
 div[i].appendChild(images)
 }
@@ -52,7 +48,7 @@ for(i=1; i<=3; i++){
 div3.appendChild(div[i])
 
 var images = document.createElement('img')
-images.id = 'picture'
+images.id = 'picture'+(i+3)
 images.src = 'images/image'+(i+3)+'.png'
 div[i].appendChild(images)
 
@@ -67,13 +63,15 @@ for(i=1; i<=3; i++){
   div[i]=document.createElement('div')
   div[i].id ='div_'+3+'_'+i
 div4.appendChild(div[i])
+if(i<3){
 var images = document.createElement('img')
-images.id = 'picture'
+images.id = 'picture'+(i+6)
 images.src = 'images/image'+(i+6)+'.png'
 div[i].appendChild(images)
+  }
 }
-div4.style.float='right'
 
+div4.style.float='right'
 // for(i=1;i<=8;i++){
 // var images = document.createElement('img')
 // images.id = 'picture'
